@@ -101,7 +101,9 @@ define(["lib-build/css!lib-app/bootstrap/css/bootstrap.min",
 					sharingurl: app.indexCfg.sharingurl,
 					username: app.indexCfg.username,
 					password: app.indexCfg.password,
-					oAuthAppId: app.indexCfg.oAuthAppId
+					oAuthAppId: app.indexCfg.oAuthAppId,
+					//TOPGIS Extension
+	                portalUrl: app.indexCfg.portalUrl
 				};
 			}
 			
@@ -257,7 +259,8 @@ define(["lib-build/css!lib-app/bootstrap/css/bootstrap.min",
 					var info = new ArcGISOAuthInfo({
 						appId: app.indexCfg.oAuthAppId,
 						popup: false,
-						portalUrl: 'https:' + app.indexCfg.sharingurl.split('/sharing/')[0]
+						//TOPGIS Extension
+	                    portalUrl: app.indexCfg.portalUrl
 					});
 					
 					IdentityManager.registerOAuthInfos([info]);

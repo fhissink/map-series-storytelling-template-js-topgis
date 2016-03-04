@@ -40,7 +40,7 @@
 				appid: "",
 				// Optionally to secure Series's access, use an OAuth application ID (example: 6gyOg377fLUhUk6f)
 				// User will need to sign-in to access the viewer even if your application is public
-				oAuthAppId: "",
+				oAuthAppId: "0WXgtkBQUfuzq0At",
 				// Optionally, to use the appid URL parameter, configure authorizedOwners to reference
 				//    members whose stories can be viewed by this storytelling app.
 				// To authorize stories owned by...
@@ -49,7 +49,10 @@
 				//    any member of one or more organizations: use ["[orgID]"] or ["[orgID1]", "[orgID2]", ...] (Note the use of brackets in this case, e.g., ["[nzS0F0zdNLvs7nc8]"])
 				//        You can get your orgID by going to My Organization and clicking Find...The most viewed items in the organization.
 				//        Your orgID will be shown in the search box.
-				authorizedOwners: [""]
+				authorizedOwners: ["*"],
+				
+				// TOPGIS Extension to enable SSO this additional parameter is necessary
+				portalUrl: "https://topicus.maps.arcgis.com"
 			};
 			// Optionally sharing and proxy URLs can be configured in app/config.js. This is only required  
 			//  when the webmap is not hosted on ArcGIS Online or a Portal for ArcGIS instance and the application isn't deployed as /home/MapSeries/ or /apps/MapSeries/. 
@@ -73,6 +76,31 @@
 	<body class="claro">
 		<style>
 			/* CUSTOM CSS RULES */
+			        /* CUSTOM CSS RULES */
+			/* TOPGIS Styling */
+
+			#header {
+				display: none;
+			}
+
+			.accordion-header-arrow {
+				display: none;
+			}
+
+			.accordion-header-number .image-wrapper img {
+				width: 32px;
+				height: 32px;
+				margin-top: -15px;
+				margin-left: -10px;
+			}
+
+			.accordion-header-number .image-wrapper .btn-fullscreen {
+				display: none;
+			}
+
+			.accordionPanel .active .accordion-header .accordion-header-title .accordion-header-title-wrapper {
+				color: #009BAC !important;
+			}
 		</style>
 		
 		<!-- Builder top panel is injected here -->
